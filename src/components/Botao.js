@@ -1,21 +1,27 @@
-import React from 'react'
-import {Button, View, Alert, StyleSheet} from 'react-native'
+import React, { useState } from 'react'
+import { TouchableOpacity, View, Text } from 'react-native'
 
-function alertButton () {
-    Alert.alert('Fui clicado!')
-}
-export default function Botao (){
+import styles from './Estilo'
+
+const Botao = (prop) =>{
+    const [numero, setNumero] = useState(prop.inicial)
+
+    function Dobra() {
+        setNumero(numero * 2)        
+    }
+
     return(
-        <View style={styles.view} accessible={true}>
-            <Button color='blue'  title='Alert!' onPress={() => Alert.alert('Fui clicado!') }/>
-            <Button color='green'  title='Alert!' onPress={(alertButton) }/>
-            <Button title='Warn!' onPress={() => console.warn('Fui clicado!')} accessibilityLabel="teste"/>
+        <View style={styles.bot}>
+            <TouchableOpacity
+                style={styles.botao}
+                onPress={Dobra}
+            >
+                <Text style={styles.text} >Dobrar</Text>
+            </TouchableOpacity>
+
+            <Text style={styles.text}>Resposta: {numero}</Text>
         </View>
     );
 }
 
-const styles = StyleSheet.create({
-    view:{
-        width: "50%",
-    }
-})
+export default Botao;
