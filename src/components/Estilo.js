@@ -46,6 +46,5 @@ export default StyleSheet.create({
         width: 120,
         alignItems: 'center',
         justifyContent: 'center',
-
     },
 })
