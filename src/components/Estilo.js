@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native'
+import { StyleSheet } from 'react-native'
 
 export default StyleSheet.create({
     container: {
@@ -6,45 +6,42 @@ export default StyleSheet.create({
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
-    },
-    top: {
-        flex: 1,
-        backgroundColor: '#fff',
-        height: '50%',
-        width: '100%',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    bot: {
-        flex: 1,
-        flexDirection: 'column',
-        backgroundColor: 'powderblue',
-        height: '50%',
-        width: '100%',
-        alignItems: 'center',
-        justifyContent: 'center',
+        padding: 15
     },
     input: {
-        height: 50,
+        height: 40,
         width: 150,
-        alignItems: 'center',
+        borderColor: 'blue',
+        borderWidth: 1,
+        borderRadius: 10,
+        fontSize: 25,
+        paddingHorizontal: 19,
+        margin: 10,
     },
     view: {
-        flex: 1, 
-        flexDirection: 'row', 
+        flex: 1,
+        flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
     },
     text: {
         fontSize: 25,
+        maxWidth: 300,
     },
     botao: {
-        marginBottom: 50,
+        margin: 20,
         backgroundColor: '#fff',
+        borderColor: '#f1f',
+        borderWidth: 1,
         borderRadius: 10,
         height: 50,
         width: 120,
         alignItems: 'center',
         justifyContent: 'center',
+    },
+    botoes: {
+        height: 100,
+        display: 'flex',
+        flexDirection: 'row'
     },
 })

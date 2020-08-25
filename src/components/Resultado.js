@@ -3,12 +3,9 @@ import { View, Text } from 'react-native';
 
 import styles from './Estilo'
 
-const Resultado = () => {
-  return (
-    <View>
-        <Text style={styles.text}></Text>
-    </View>
-  )
+const Resultado = (prop) => {
+  return <Text style={styles.text}>{prop.text}</Text>
+
 }
 
 export default Resultado;
